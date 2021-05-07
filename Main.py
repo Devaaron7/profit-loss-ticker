@@ -63,6 +63,28 @@ def percentage(inc, org):
     #print(n)
     return n / org
 
+print("""
+0. Ethereum
+1. Dogecoin
+2. Bitcoin
+3. Bitcoin Cash
+4. Litecoin
+5. Roblox
+6. Coinbase
+""")
+
+URL = ["https://robinhood.com/crypto/ETH", "https://robinhood.com/crypto/DOGE", "https://robinhood.com/crypto/btc", "https://robinhood.com/crypto/BCH", "https://robinhood.com/crypto/ltc", "https://robinhood.com/stocks/RBLX", "https://robinhood.com/stocks/COIN"]
+
+coin_name = ["Ethereum", "Dogecoin", "Bitcoin", "Bitcoin Cash", "Litecoin", "Roblox", "Coinbase"]
+
+error = list(range(0, len(URL)))
+
+user_choice = int(input("Please enter the number of a item from the list to track\n"))
+
+while user_choice not in error:
+    user_choice = int(input("Invalid choice. Please enter the number of a item from the list to track\n"))
+print("User chose to track ", coin_name[user_choice], "\n")
+
 
 o_i = float(input("Enter Investment\n"))
 
@@ -72,13 +94,10 @@ i += o_i
 
 asset = float(input("Enter asset price at time of investment\n"))
 
-URL = ["https://robinhood.com/crypto/ETH", "https://robinhood.com/crypto/DOGE", "https://robinhood.com/crypto/btc", "https://robinhood.com/crypto/BCH", "https://robinhood.com/crypto/ltc", "https://robinhood.com/stocks/RBLX", "https://robinhood.com/stocks/COIN"]
 
-coin_name = ["Ethereum", "Dogecoin", "Bitcoin", "Bitcoin Cash", "Litecoin", "Roblox", "Coinbase"]
 
-user_choice = 6
 
-error = list(range(0, len(URL)))
+
 
 '''
 while True:
